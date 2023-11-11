@@ -1,0 +1,16 @@
+body {
+    margin: 0;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.page {
+    min-height: 100vh;
+    font-style: normal;
+    font-family: "Inter", sans-serif!important;
+    position: relative;
+}

@@ -11,7 +11,7 @@ import {js} from './gulp/tasks/js.js';
 import {images} from './gulp/tasks/images.js' 
 
 
-import ghPages from 'gulp-gh-pages';
+// import ghPages from 'gulp-gh-pages';
 
 // const deploy = () => {
 //     return app.gulp.src('./dist/**/*')
@@ -28,17 +28,19 @@ import ghPages from 'gulp-gh-pages';
 //     ));
 // }
 
-// gulp.task('publish', function () {
-//     return gulp.src("./dist/**/*")
-//       .pipe(ghPages())
+// gulp.task('deploy', function() {
+//     return gulp.src('./dist/**/*.*')
+//       .pipe(ghPages());
 //   });
 
-gulp.task('deploy', function() {
-    return gulp.src(app.path.buildFolder)
-      .pipe(ghPages(
-        
-      ));
-  });
+// gulp.task('deploy', function() {
+//     return gulp.src('./dist/**/*')
+//       .pipe(ghPages({
+//         remoteUrl: 'https://github.com/VeronaDracula/test.git'
+//       }
+       
+//       ));
+//   });
 
 global.app = { 
     isBuild: process.argv.includes('--build'),

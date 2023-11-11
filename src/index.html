@@ -5,15 +5,20 @@
 })
 
 <body>
-    <!-- <div class="page"> -->
+    <div class="page">
         @@include('html/header.html', {})
 
         <main class="content">
-            <img width="150" src="@img/owl2.jpg" alt="">
+            @@include('html/search.html', {})
+            @@include('html/options.html', {})
+            @@include('html/partners.html', {})
         </main>
 
+        @@include('html/menu.html', {})
+        @@include('html/popup.html', {})
+
         @@include('html/footer.html', {})
-    <!-- </div> -->
+    </div>
 
     <script src="./js/app.min.js"></script>
 </body>

@@ -1,6 +1,73 @@
-body {
-    background: url("@img/owl2.jpg") 0 0 no-repeat;
-    span {
-        color: red;
+@import "./blocks/_page.scss";
+@import "./blocks/_header.scss";
+@import "./blocks/_search.scss";
+@import "./blocks/_options.scss";
+@import "./blocks/_partners.scss";
+@import "./blocks/_footer.scss";
+@import "./blocks/_menu.scss";
+@import "./blocks/_popup.scss";
+
+.help__open-btn {
+    width: 48px;
+    height: 48px;
+    background: transparent center no-repeat url('@img/ic_help.svg');
+    border: none;
+}
+
+
+.search {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 360px;
+    background: transparent center no-repeat url('@img/pic_main.jpg');
+    background-size: cover;
+}
+
+.footer__icon {
+    width: 79px;
+    height: 52px;
+    background: transparent center no-repeat url('@img/comodossl-trustlogo2.png');
+}
+
+
+.partners__item-img {
+    margin-bottom: 15px;
+
+    &--one {
+        width: 110px;
+        height: 100px;
+        background: transparent center no-repeat url('@img/logo_partner1.svg');
+    }
+
+    &--two {
+        width: 90px;
+        height: 100px;
+        background: transparent center no-repeat url('@img/logo_partner2.svg');
+    }
+
+    &--tree {
+        width: 100px;
+        height: 100px;
+        background: transparent center no-repeat url('@img/logo_partner3.svg');
+    }
+
+    &--four {
+        width: 148px;
+        height: 100px;
+        background: transparent center no-repeat url('@img/logo_partner4.svg');
+    }
+
+    &--five {
+        width: 115px;
+        height: 100px;
+        background: transparent center no-repeat url('@img/logo_partner5.svg');
+    }
+
+    &--six {
+        width: 114px;
+        height: 100px;
+        background: transparent center no-repeat url('@img/logo_partner6.svg');
     }
 }
