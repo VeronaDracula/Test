@@ -7,6 +7,8 @@
 @import "./blocks/_menu.scss";
 @import "./blocks/_popup.scss";
 
+
+
 .help__open-btn {
     width: 48px;
     height: 48px;
@@ -18,11 +20,12 @@
 .search {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    // justify-content: center;
     align-items: center;
     height: 360px;
     background: transparent center no-repeat url('@img/pic_main.jpg');
     background-size: cover;
+    padding: 0 20px;
 }
 
 .footer__icon {
@@ -69,5 +72,67 @@
         width: 114px;
         height: 100px;
         background: transparent center no-repeat url('@img/logo_partner6.svg');
+    }
+}
+
+@media screen and (max-width: 799px) {
+    .search {
+        height: 215px;
+    }
+
+    .search__btn {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 48px;
+        height: 48px;
+        background: transparent center no-repeat url('@img/ic_search.svg');
+        border-radius: 4px;
+        font-size: 0;
+    }
+
+
+    .partners__item-img {
+        margin-bottom: 8px;
+    }
+
+    .card__hide-img {
+        width: 39px;
+        height: 39px;
+        margin-right: 27px;
+
+        &--one {
+            background: transparent center no-repeat url('@img/ic_gibdd1.svg');
+        }
+
+        &--two {
+            background: transparent center no-repeat url('@img/ic_fssp.svg');
+        }
+
+        &--tree {
+            background: transparent center no-repeat url('@img/ic_nalog.svg');
+        }
+
+        &--four {
+            background: transparent center no-repeat url('@img/ic_rr.svg');
+        }
+    }
+
+    .card__hide-icon {
+        width: 9px;
+        height: 9px;
+        background: transparent center no-repeat url('@img/ic_dropdown-arrow.svg');
+        transition: transform 0.5s;
+
+        &.active {
+            transform: rotate(180deg);
+            transition: transform 0.5s;
+        }
+    }
+
+    .header__popup-btn {
+        width: 30px;
+        height: 30px;
+        order: 1;
     }
 }

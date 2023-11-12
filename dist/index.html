@@ -3,20 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet"> -->
-    <link rel="stylesheet" href="./css/styles.min.css">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap&_v=20231112174224" rel="stylesheet"> -->
+    <link rel="stylesheet" href="./css/styles.min.css?_v=20231112174224">
     <title>главная</title>
 </head>
 
 <body>
     <div class="page">
         <header class="header">
-    <button class="header__popup-btn"></button>
-    
+    <!-- <button class="header__popup-btn"></button> -->
+
+    <!-- <div class="header__popup-btn">
+        <div class="lines"></div>
+      </div> -->
+
+      <div class="header__popup-btn">
+        <div class="header__popup-container">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+      </div>
+
+
     <div class="header__logo-box">
         <img class="header__logo" src="img/logo.svg" alt="логотип">
     </div>
-    
+     
 
     <div class="help">
         <button class="help__open-btn"></button>
@@ -44,6 +57,7 @@
 </section>
             <section class="options">
     <h2 class="options__title">Здесь можно оплатить</h2>
+    <h2 class="options__title-mobile">Узнайте, как оплатить</h2>
     <nav class="options__menu">
         <ul class="options__list">
             <li class="options__list-item">
@@ -64,6 +78,16 @@
 
     <ul class="cards">
         <li class="card">
+            <div class="card__hide-btn">
+                <div class="card__hide-cover"></div>
+                <div class="card__hide-box">
+                    <div class="card__hide-img card__hide-img--one"></div>
+                    <p class="card__hide-text">Штрафы ГИБДД</p>
+                </div>
+            
+                <div class="card__hide-icon"></div>
+            </div>
+
             <div class="card__box">
                 <div class="card__container">
                     <h3 class="card__title">Штрафы ГИБДД</h3>
@@ -82,12 +106,22 @@
                     </p>
                 </div>
                 <div class="card__img-box">
-                    <img class="card__img" src="img/pic_block1.jpg"/>
+                    <picture><source srcset="img/pic_block1.webp" type="image/webp"><img class="card__img" src="img/pic_block1.jpg"/></picture>
                 </div>
             </div>
         </li>
 
         <li class="card card--reverse">
+            <div class="card__hide-btn">
+                <div class="card__hide-cover"></div>
+                <div class="card__hide-box">
+                    <div class="card__hide-img card__hide-img--two"></div>
+                    <p class="card__hide-text">Судебные задолженности</p>
+                </div>
+            
+                <div class="card__hide-icon"></div>
+            </div>
+
             <div class="card__box">
                 <div class="card__container">
                     <h3 class="card__title">Судебные задолженности</h3>
@@ -104,12 +138,22 @@
                     </p>
                 </div>
                 <div class="card__img-box">
-                    <img class="card__img" src="img/pic_block2.jpg"/>
+                    <picture><source srcset="img/pic_block2.webp" type="image/webp"><img class="card__img" src="img/pic_block2.jpg"/></picture>
                 </div>
             </div>
         </li>
 
         <li class="card">
+            <div class="card__hide-btn">
+                <div class="card__hide-cover"></div>
+                <div class="card__hide-box">
+                    <div class="card__hide-img card__hide-img--tree"></div>
+                    <p class="card__hide-text">Налоги</p>
+                </div>
+            
+                <div class="card__hide-icon"></div>
+            </div>
+
             <div class="card__box">
                 <div class="card__container">
                     <h3 class="card__title">Налоги</h3>
@@ -126,12 +170,22 @@
                     </p>
                 </div>
                 <div class="card__img-box">
-                    <img class="card__img" src="img/pic_block3.jpg"/>
+                    <picture><source srcset="img/pic_block3.webp" type="image/webp"><img class="card__img" src="img/pic_block3.jpg"/></picture>
                 </div>
             </div>
         </li>
 
         <li class="card card--reverse">
+            <div class="card__hide-btn">
+                <div class="card__hide-cover"></div>
+                <div class="card__hide-box">
+                    <div class="card__hide-img card__hide-img--four"></div>
+                    <p class="card__hide-text">Услуги Росреестра</p>
+                </div>
+            
+                <div class="card__hide-icon"></div>
+            </div>
+
             <div class="card__box">
                 <div class="card__container">
                     <h3 class="card__title">Услуги Росреестра</h3>
@@ -149,7 +203,7 @@
                     </p>
                 </div>
                 <div class="card__img-box">
-                    <img class="card__img" src="img/pic_block4.jpg"/>
+                    <picture><source srcset="img/pic_block4.webp" type="image/webp"><img class="card__img" src="img/pic_block4.jpg"/></picture>
                 </div>
             </div>
         </li>
@@ -195,7 +249,7 @@
         <ul class="menu__list">
             <li class="menu__item menu__item--login">Вход в Личный кабинет</li>
         </ul>
-    </div>
+    </div> 
 
     <div class="menu__box">
         <h2 class="menu__title">ЛИЧНЫЙ КАБИНЕТ</h2>
@@ -207,12 +261,15 @@
             <li class="menu__item">Служба поддержки</li>
         </ul>
     </div>
-    
-
 </section>
         <section class="popup">
     <div class="popup__container">
-        <button class="popup__close"></button>
+        <button class="popup__close">
+            <div class="popup__close-container">
+                <div class="popup__close-line1"></div>
+                <div class="popup__close-line2"></div>
+            </div>
+        </button>
 
         <h2 class="popup__title">Введите логин и пароль для входа в Личный кабинет</h2>
 
@@ -221,12 +278,12 @@
             <input class="popup__input" placeholder="Пароль"/>
 
             <button class="popup__btn-main">Войти</button>
-        </form>
+        </form> 
 
         <a class="popup__link" href="#">Напомнить пароль</a>
         <a class="popup__link" href="#">Регистрация</a>
     </div>
-</section>
+</section> 
 
         <footer class="footer">
     <p class="footer__copy">© 2012 – 2020 ООО «Название компании»</p>
@@ -234,7 +291,7 @@
 </footer> 
     </div>
 
-    <script src="./js/app.min.js"></script>
+    <script src="./js/app.min.js?_v=20231112174224"></script>
 </body>
 
 </html>

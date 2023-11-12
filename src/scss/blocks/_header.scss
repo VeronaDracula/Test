@@ -10,12 +10,49 @@
     top: 0;
     z-index: 100;
     border-bottom: 1px solid #00468533;
+    position: relative;
 }
 
+
 .header__popup-btn {
+    position: relative;
     width: 48px;
     height: 48px;
 }
+
+.header__popup-container {
+    display: inline-block;
+    cursor: pointer;
+     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .line1, .line2, .line3 {
+    width: 30px;
+    height: 3px;
+    background: #004685 0% 0% no-repeat padding-box;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  
+  .change .line1 {
+    -webkit-transform: rotate(-45deg) translate(-5px, 6px) ;
+    transform: rotate(-45deg) translate(-5px, 6px) ;
+  }
+  
+  .change .line2 {
+    opacity: 0;
+  }
+  
+  .change .line3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+    transform: rotate(45deg) translate(-8px, -8px) ;
+  }
+
+
+
 
 .header__logo-box {
     width: 295px;
@@ -45,7 +82,7 @@
     position: fixed;
     width: 100%;
     height: 100%;
-    top: 0;
+    top: 0; 
     left: 0;
     display: flex; 
     justify-content: center;
@@ -119,4 +156,70 @@
     transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
     background: #FFFFFF 0% 0% no-repeat padding-box;
     box-shadow: 0px 3px 12px #00000033;
+}
+
+
+.menu-btn{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right:0;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1;
+  }
+   
+  .menu-btn > span,
+  .menu-btn > span::before,
+  .menu-btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #616161;
+    transition-duration: .25s;
+  }
+  .menu-btn > span::before {
+    content: '';
+    top: -8px;
+  }
+  .menu-btn > span::after {
+    content: '';
+    top: 8px;
+  }
+
+
+@media screen and (max-width: 799px) {
+    .header {
+        height: 48px;
+        padding: 9px 15px;
+    }
+    
+    // .header__popup-btn {
+    //     width: 30px;
+    //     height: 30px;
+    //     order: 1;
+    // }
+    
+    .header__logo-box {
+        width: 195px;
+        height: 30px;
+        order: 0;
+    }
+
+    
+    // .header__help-btn {
+    //     width: 48px;
+    //     height: 48px;
+    //     background: transparent center no-repeat url('@img/ic_help.svg');
+    //     border: none;
+    // }
+    
+    
+    .help {
+        display: none;
+    }
+
 }

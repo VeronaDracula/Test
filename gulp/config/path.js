@@ -22,7 +22,7 @@ export const path = {
         html: `${srcFolder}/*.html`,
         files: `${srcFolder}/files/**/*.*`
     },
-    watch: {
+    watch: { 
         js: `${srcFolder}/js/**/*.js`,
         scss: `${srcFolder}/scss/**/*.scss`,
         html: `${srcFolder}/**/*.html`,
@@ -33,5 +33,4 @@ export const path = {
     buildFolder: buildFolder,
     srcFolder: srcFolder,
     rootFolder: rootFolder,
-    ftp: ``,
 }

@@ -53,3 +53,26 @@
         color: #569DDC;
     }
 }
+
+
+@media screen and (max-width: 799px) {
+    .menu {
+        width: 280px;
+        padding: 21px 16px 20px 20px;
+        top: 48px;
+        right: -100%;
+        left: auto;
+        transition: right 0.3s cubic-bezier(0, 0.9, 0.24, 0.94);
+        position: fixed;
+        height: calc(100% - 68px);
+        z-index: 1001;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        box-shadow: 0px 3px 12px #00000029;
+        opacity: 0.95;
+    
+        &--is-opened {
+            right: 0;
+            transition: right 0.3s cubic-bezier(0, 0.9, 0.24, 0.94);
+        }
+    }
+}

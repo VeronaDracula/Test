@@ -2,6 +2,9 @@ const popupMenu = document.querySelector('.menu');
 const popupMenuCloseBtn = document.querySelector('.header__popup-btn');
 const popupLoginOpenBtn = document.querySelector('.menu__item--login');
 
+
+const icon = document.querySelector('.header__popup-container');
+
     //функция закрытия popup
 function closePopup(popup) {
     popup.classList.remove('menu--is-opened');
@@ -16,6 +19,7 @@ function openPopup(popup) {
 
 
 popupMenuCloseBtn.addEventListener('click', () => {
+    icon.classList.toggle("change");
     if(popupMenu.classList.contains('menu--is-opened')) {
         closePopup(popupMenu);
     } else {
@@ -25,4 +29,5 @@ popupMenuCloseBtn.addEventListener('click', () => {
 
 popupLoginOpenBtn.addEventListener('click', () => {
     closePopup(popupMenu);
+    icon.classList.toggle("change");
 });

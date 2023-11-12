@@ -4,10 +4,11 @@
     height: 100%;
     background: #000000CC 0% 0% no-repeat padding-box;
     top: 0;
-    left: 0;
+    left: 0; 
     display: flex; 
     justify-content: center;
-    align-items: center;
+    // align-items: center;
+    padding-top: 158px;
     z-index: 110;
     transition: visibility 0s, opacity 0.3s linear;
 
@@ -37,21 +38,42 @@
     width: 48px;
     height: 48px;
     border: none;
-    // background: transparent center no-repeat url(../img/popup-close.svg);
+    background: transparent;
 
     &:hover {
         opacity: 0.8;
+        cursor: pointer;
     }
 } 
+
+.popup__close-line1, .popup__close-line2 {
+    width: 30px;
+    height: 3px;
+    background: #00000040 0% 0% no-repeat padding-box;
+    margin: 6px 0;
+    opacity: 1
+  }
+
+.popup__close-line1 {
+    -webkit-transform: rotate(-45deg) translate(3px, 9px) ;
+    transform: rotate(-45deg) translate(3px, 8px) ;
+}
+
+.popup__close-line2 {
+    -webkit-transform: rotate(45deg) translate(1px, -10px) ;
+    transform: rotate(45deg) translate(1px, -10px) ;
+}
 
 .popup__title {
     font: normal normal bold 16px/24px Open Sans;
     letter-spacing: 0px;
     color: #000000;
     margin-bottom: 33px;
+    max-width: 267px;
 }
 
 .popup__form {
+    width: 100%;
     margin-bottom: 32px;
 }
 
@@ -86,6 +108,7 @@
 }
 
 .popup__link {
+    text-decoration: none;
     display: block;
     font: normal normal normal 16px/24px Open Sans;
     letter-spacing: 0px;
@@ -104,3 +127,33 @@
         color: #569DDC;
     }
 }
+
+
+@media screen and (max-width: 799px) {
+    .popup {
+        padding-top: 0;
+    }
+    .popup__container {
+        position: relative;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        box-shadow: 0px 3px 6px #00000029;
+        width: 100%;
+        height: 100%;
+        padding: 24px 20px 0 20px;
+    }
+
+    .popup__input {
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        border: 2px solid #00468533;
+        border-radius: 8px;
+        margin-bottom: 16px;
+        width: 100%;
+        height: 60px;
+        padding: 19px 24px 20px 24px;
+    
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    
+} 
