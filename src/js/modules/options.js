@@ -36,6 +36,31 @@ document.addEventListener('click', (evt) => {
 })
 
 
+function handleResize() {
+  const windowWidth = window.innerWidth;
+  const openBlock = document.querySelectorAll('.card__box');
+
+  if ( windowWidth >=800) {
+    openBlock.forEach(item => {
+      item.style.height = `auto`;
+    })
+  } else if( windowWidth < 799){
+    openBlock.forEach(item => {
+      item.style.height = `0`;
+    })
+  }
+}
+
+let timeOutFunctionId;
+window.addEventListener('resize', () => {
+    clearTimeout(timeOutFunctionId);
+    timeOutFunctionId = setTimeout(() => {
+        
+      handleResize();
+    }, 100);
+})
+
+
 
 
 
