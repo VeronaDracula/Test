@@ -28,8 +28,8 @@
     // justify-content: center;
     align-items: center;
     height: 360px;
-    background: transparent center no-repeat url('@img/pic_main.jpg');
-    background-size: cover;
+    background: center/cover no-repeat url('@img/pic_main.jpg');
+    // background-size: cover;
     padding: 0 20px;
     width: 100%;
 }
