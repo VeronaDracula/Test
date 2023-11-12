@@ -1,3 +1,20 @@
+const optionsLink = document.querySelectorAll('.options__list-link')
+
+
+optionsLink.forEach((element) => {
+  element.addEventListener('click', function (e) {
+    e.preventDefault();
+    
+    const blockID = element.getAttribute('href')
+    
+    document.querySelector(blockID).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    })
+  })
+});
+
+
 
 document.addEventListener('click', (evt) => {
     let target = evt.target;
@@ -17,3 +34,10 @@ document.addEventListener('click', (evt) => {
           }
     }
 })
+
+
+
+
+
+
+

@@ -40,10 +40,12 @@
     border: none;
     background: transparent;
 
-    &:hover {
-        opacity: 0.8;
-        cursor: pointer;
-    }
+    @media (any-hover: hover) {
+        &:hover {
+            opacity: 0.8;
+            cursor: pointer;
+        }
+      }
 } 
 
 .popup__close-line1, .popup__close-line2 {
@@ -86,6 +88,10 @@
     height: 60px;
     padding: 19px 24px 20px 24px;
 
+    &:focus {
+        outline: none;
+    }
+
     &:last-child {
         margin-bottom: 0;
     }
@@ -102,8 +108,11 @@
     width: 100%;
     height: 60px;
 
-    &:hover {
-        cursor: pointer;
+    @media (any-hover: hover) {
+        &:hover {
+            cursor: pointer;
+            background: #d53154;
+        }
     }
 }
 
@@ -122,9 +131,11 @@
         margin-bottom: 0;
     }
 
-    &:hover {
-        cursor: pointer;
-        color: #569DDC;
+    @media (any-hover: hover) {
+        &:hover {
+            cursor: pointer;
+            color: #569DDC;
+        }
     }
 }
 

@@ -1,6 +1,6 @@
 const help = document.querySelector('.help__overlay');
 const helpOpenBtn = document.querySelector('.help__open-btn');
-
+const helpLink = document.querySelector('.help__link');
 
 
     //функция закрытия popup
@@ -32,6 +32,10 @@ function closePopupByClickOverlay(evt) {
 
 helpOpenBtn.addEventListener('click', () => {
     openPopup(help);
+});
+
+helpLink.addEventListener('click', () => {
+    closePopup(help);
 });
 
 help.addEventListener('click', closePopupByClickOverlay);

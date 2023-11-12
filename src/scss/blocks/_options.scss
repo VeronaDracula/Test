@@ -49,10 +49,13 @@
     color: #004685;
     list-style: none;
     border-bottom: 1px dashed #004685;
+    text-decoration: none;
 
-    &:hover {
-        cursor: pointer;
-        color: #569DDC;
+    @media (any-hover: hover) {
+        &:hover {
+            cursor: pointer;
+            color: #569DDC;
+        }
     }
 }
 
